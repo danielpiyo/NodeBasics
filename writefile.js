@@ -12,6 +12,10 @@ let md =
 
 `;
 
-fs.writeFile("jscript.md", md.trim(), function () {
+fs.writeFile("jscript.md", md.trim(), function (err) {
+    if (err) {
+        throw err
+    }
+    fs.appendFileSync("jscript.md", "\n\n ## Node is the best of all")
     console.log(`All Done ${data}`);
 })
