@@ -17,5 +17,5 @@ fs.writeFile("jscript.md", md.trim(), function (err) {
         throw err
     }
     fs.appendFileSync("jscript.md", "\n\n ## Node is the best of all")
-    console.log(`All Done ${data}`);
+    console.log(`All Done`);
 })
